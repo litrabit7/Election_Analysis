@@ -57,6 +57,8 @@ for candidate_name in candidate_votes:
     #  To do: print out each candidate's name, vote count, and percentage of
     # votes to the terminal.
 
+    print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+
     # Determine winning vote count and candidate
     # Determine if the votes is greater than the winning count.
     if (votes > winning_count) and (vote_percentage > winning_percentage):
@@ -67,7 +69,13 @@ for candidate_name in candidate_votes:
          # And, set the winning_candidate equal to the candidate's name.
          winning_candidate = candidate_name
 
+#  To do: print out the winning candidate, vote count and percentage to
+#   terminal.
 
-    # To do: print out each candidate's name, vote count, and percentage of
-    # votes to the terminal.
-    print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+winning_candidate_summary = (
+    f"-------------------------\n"
+    f"Winner: {winning_candidate}\n"
+    f"Winning Vote Count: {winning_count:,}\n"
+    f"Winning Percentage: {winning_percentage:.1f}%\n"
+    f"-------------------------\n")
+print(winning_candidate_summary)
